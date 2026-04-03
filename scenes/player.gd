@@ -2,6 +2,8 @@ extends CharacterBody2D
 
 const SPEED := 200
 var direction := Vector2.ZERO
+@onready var animations: AnimatedSprite2D = $AnimatedSprite2D
+
 
 func _physics_process(_delta: float) -> void:
 	direction = Input.get_vector("Left", "Right", "Up", "Down") 
@@ -9,6 +11,7 @@ func _physics_process(_delta: float) -> void:
 	# Helps replace many if statements and conditional checking
 	# And even handles negative and positive movements for us
 	handle_movement(direction)
+	handle_animation()
 	
 	if Input.is_action_just_pressed("Print"):
 		print("Something")
@@ -19,3 +22,10 @@ func _physics_process(_delta: float) -> void:
 func handle_movement(current_direction):
 	velocity = (current_direction * SPEED)
 	return velocity
+
+func handle_animation():
+	if direction:
+		animations.play('walk')
+		animations.flip_h = direction.x > 0
+	else:
+		animations.frame = 0

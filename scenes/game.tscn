@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://doghmovcgeltw" path="res://graphics/map.png" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://dghd7rii024ea" path="res://scenes/player.tscn" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://dlc7dggh2h5do" path="res://scenes/tree.tscn" id="3_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://buyfgvgm57caj" path="res://map_bounds.tscn" id="4_lbhrr"]
 
 [node name="Game" type="Node2D" unique_id=467729423]
 metadata/_edit_vertical_guides_ = [-192.0, 192.0]
@@ -12,7 +13,23 @@ metadata/_edit_horizontal_guides_ = [-321.0, 321.0]
 texture = ExtResource("1_uwrxv")
 
 [node name="Player" parent="Sprite2D" unique_id=1514745219 instance=ExtResource("2_yqjtg")]
-position = Vector2(-3, 189)
+position = Vector2(24, 50)
 
-[node name="Decorations" parent="." unique_id=809148713 instance=ExtResource("3_lnu2h")]
+[node name="Tree" parent="." unique_id=809148713 instance=ExtResource("3_lnu2h")]
 position = Vector2(-69, 216)
+
+[node name="LeftBorder" parent="." unique_id=1520580410 instance=ExtResource("4_lbhrr")]
+position = Vector2(-193, -2)
+rotation = 1.5707964
+
+[node name="BottomBorder" parent="." unique_id=984288133 instance=ExtResource("4_lbhrr")]
+position = Vector2(0, 321)
+rotation = 6.2831855
+
+[node name="TopBorder" parent="." unique_id=1225567219 instance=ExtResource("4_lbhrr")]
+position = Vector2(0, -321)
+rotation = 3.1415927
+
+[node name="RightBorder" parent="." unique_id=696999270 instance=ExtResource("4_lbhrr")]
+position = Vector2(194, 0)
+rotation = -1.5707964
