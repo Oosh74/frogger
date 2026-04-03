@@ -12,10 +12,6 @@ func _physics_process(_delta: float) -> void:
 	# And even handles negative and positive movements for us
 	handle_movement(direction)
 	handle_animation()
-	
-	if Input.is_action_just_pressed("Print"):
-		print("Something")
-	
 	move_and_slide()
 
 

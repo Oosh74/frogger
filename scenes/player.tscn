@@ -3,9 +3,6 @@
 [ext_resource type="Script" uid="uid://d3diycmbiqi3w" path="res://scenes/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://c4q6c7mxqh78h" path="res://graphics/player/player_tileset.png" id="2_g2els"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
-size = Vector2(10, 11)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_qhqgy"]
 atlas = ExtResource("2_g2els")
 region = Rect2(0, 0, 16, 16)
@@ -96,12 +93,13 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Player" type="CharacterBody2D" unique_id=531975850]
-script = ExtResource("1_g2els")
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
+size = Vector2(10, 11)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1945814061]
-position = Vector2(0, 0.5)
-shape = SubResource("RectangleShape2D_g2els")
+[node name="Player" type="CharacterBody2D" unique_id=531975850]
+collision_layer = 2
+collision_mask = 13
+script = ExtResource("1_g2els")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=124506046]
 zoom = Vector2(4, 4)
@@ -115,4 +113,9 @@ position_smoothing_enabled = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1929165275]
 sprite_frames = SubResource("SpriteFrames_tuyoq")
 animation = &"walk_down"
-frame_progress = 0.10656762
+frame = 1
+frame_progress = 0.99327606
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1945814061]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_g2els")
