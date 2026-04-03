@@ -24,8 +24,14 @@ func handle_movement(current_direction):
 	return velocity
 
 func handle_animation():
-	if direction:
+	if direction.x != 0:
 		animations.play('walk')
 		animations.flip_h = direction.x > 0
+	elif direction.y < 0:
+		animations.play("walk_up")
+	elif direction.y > 0:
+		animations.play("walk_down")
+#		Shorthand way to do above: animations.animation = 'up' if direction.y < 0 else 'down'
 	else:
+		animations.stop()
 		animations.frame = 0

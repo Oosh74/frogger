@@ -1,35 +1,58 @@
 [gd_scene format=3 uid="uid://r8e5vdmp0k17"]
 
+[ext_resource type="Script" uid="uid://d4bnsp2tcb41t" path="res://scenes/game.gd" id="1_iywne"]
 [ext_resource type="Texture2D" uid="uid://doghmovcgeltw" path="res://graphics/map.png" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://dghd7rii024ea" path="res://scenes/player.tscn" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://dlc7dggh2h5do" path="res://scenes/tree.tscn" id="3_lnu2h"]
-[ext_resource type="PackedScene" uid="uid://buyfgvgm57caj" path="res://map_bounds.tscn" id="4_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://buyfgvgm57caj" path="res://scenes/map_bounds.tscn" id="4_lbhrr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iywne"]
+size = Vector2(384, 191)
 
 [node name="Game" type="Node2D" unique_id=467729423]
+script = ExtResource("1_iywne")
 metadata/_edit_vertical_guides_ = [-192.0, 192.0]
 metadata/_edit_horizontal_guides_ = [-321.0, 321.0]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1345256118]
+[node name="BG" type="Sprite2D" parent="." unique_id=1345256118]
 texture = ExtResource("1_uwrxv")
 
-[node name="Player" parent="Sprite2D" unique_id=1514745219 instance=ExtResource("2_yqjtg")]
-position = Vector2(24, 50)
+[node name="Timer" type="Node" parent="." unique_id=261986938]
 
-[node name="Tree" parent="." unique_id=809148713 instance=ExtResource("3_lnu2h")]
-position = Vector2(-69, 216)
+[node name="CarTimer" type="Timer" parent="Timer" unique_id=920643861]
+autostart = true
 
-[node name="LeftBorder" parent="." unique_id=1520580410 instance=ExtResource("4_lbhrr")]
+[node name="Borders" type="Node" parent="." unique_id=1225160]
+
+[node name="LeftBorder" parent="Borders" unique_id=1520580410 instance=ExtResource("4_lbhrr")]
 position = Vector2(-193, -2)
 rotation = 1.5707964
 
-[node name="BottomBorder" parent="." unique_id=984288133 instance=ExtResource("4_lbhrr")]
+[node name="BottomBorder" parent="Borders" unique_id=984288133 instance=ExtResource("4_lbhrr")]
 position = Vector2(0, 321)
-rotation = 6.2831855
 
-[node name="TopBorder" parent="." unique_id=1225567219 instance=ExtResource("4_lbhrr")]
+[node name="TopBorder" parent="Borders" unique_id=1225567219 instance=ExtResource("4_lbhrr")]
 position = Vector2(0, -321)
-rotation = 3.1415927
+rotation = -3.1415925
 
-[node name="RightBorder" parent="." unique_id=696999270 instance=ExtResource("4_lbhrr")]
+[node name="RightBorder" parent="Borders" unique_id=696999270 instance=ExtResource("4_lbhrr")]
 position = Vector2(194, 0)
 rotation = -1.5707964
+
+[node name="FinishArea2D" type="Area2D" parent="Borders" unique_id=904471698]
+position = Vector2(0, -139)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/FinishArea2D" unique_id=1562576750]
+position = Vector2(0, -85.5)
+shape = SubResource("RectangleShape2D_iywne")
+
+[node name="Objects" type="Node" parent="." unique_id=191961902]
+
+[node name="Tree" parent="Objects" unique_id=809148713 instance=ExtResource("3_lnu2h")]
+position = Vector2(-69, 216)
+
+[node name="Player" parent="Objects" unique_id=1514745219 instance=ExtResource("2_yqjtg")]
+position = Vector2(24, 50)
+
+[connection signal="timeout" from="Timer/CarTimer" to="." method="_on_car_timer_timeout"]
+[connection signal="body_entered" from="Borders/FinishArea2D" to="." method="_on_finish_area_2d_body_entered"]
