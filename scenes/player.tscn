@@ -94,7 +94,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
-size = Vector2(10, 11)
+size = Vector2(10, 8)
 
 [node name="Player" type="CharacterBody2D" unique_id=531975850]
 collision_layer = 2
@@ -102,7 +102,8 @@ collision_mask = 13
 script = ExtResource("1_g2els")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=124506046]
-zoom = Vector2(4, 4)
+position = Vector2(0, -32)
+zoom = Vector2(3.33, 3.33)
 limit_left = -192
 limit_top = -320
 limit_right = 192
@@ -117,5 +118,5 @@ frame = 1
 frame_progress = 0.99327606
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1945814061]
-position = Vector2(0, 0.5)
+position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_g2els")

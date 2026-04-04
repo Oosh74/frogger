@@ -1,16 +1,18 @@
 [gd_scene format=3 uid="uid://dlc7dggh2h5do"]
 
-[ext_resource type="Texture2D" uid="uid://y3ndpd5bhsi3" path="res://graphics/objects/tree2.png" id="10_nyve2"]
+[ext_resource type="Script" uid="uid://cgfs0rr4w0db6" path="res://scenes/tree.gd" id="1_vplca"]
+[ext_resource type="Texture2D" uid="uid://d0so81ys3820n" path="res://graphics/objects/tree1.png" id="2_vplca"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hcp6a"]
-size = Vector2(10, 18)
+size = Vector2(10, 9)
 
-[node name="Decorations" type="StaticBody2D" unique_id=809148713]
+[node name="Tree" type="StaticBody2D" unique_id=809148713]
 collision_mask = 0
+script = ExtResource("1_vplca")
 
-[node name="TreeTwo" type="Sprite2D" parent="." unique_id=1030349004]
-texture = ExtResource("10_nyve2")
+[node name="TreeSprite" type="Sprite2D" parent="." unique_id=1030349004]
+texture = ExtResource("2_vplca")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=595305383]
-position = Vector2(0, 3)
+position = Vector2(0, 8.5)
 shape = SubResource("RectangleShape2D_hcp6a")
