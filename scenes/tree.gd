@@ -8,5 +8,4 @@ const TREES = [TREE_1, TREE_2]
 
 
 func _ready():
-	var random_tree_num = randi_range(0, 1)
-	$TreeSprite.texture = TREES[random_tree_num]
+	$TreeSprite.texture = TREES.pick_random()

@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED := 200
+const SPEED := 150
 var direction := Vector2.ZERO
 @onready var animations: AnimatedSprite2D = $AnimatedSprite2D
 
@@ -29,5 +29,4 @@ func handle_animation():
 		animations.play("walk_down")
 #		Shorthand way to do above: animations.animation = 'up' if direction.y < 0 else 'down'
 	else:
-		animations.stop()
 		animations.frame = 0

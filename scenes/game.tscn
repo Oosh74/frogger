@@ -19,11 +19,16 @@
 [ext_resource type="Texture2D" uid="uid://cxutqp0hti8vw" path="res://graphics/objects/bench.png" id="19_qouja"]
 [ext_resource type="Texture2D" uid="uid://cv8cli0ov53f1" path="res://graphics/objects/box2.png" id="20_wljb1"]
 [ext_resource type="Texture2D" uid="uid://y78osdw0bolc" path="res://graphics/objects/box1.png" id="21_v2yb1"]
+[ext_resource type="Texture2D" uid="uid://boj6kq1t4mduj" path="res://graphics/objects/tree potted.png" id="22_37s47"]
 [ext_resource type="Texture2D" uid="uid://b3jchn0artiyt" path="res://graphics/objects/line.png" id="22_js0lu"]
+[ext_resource type="FontFile" uid="uid://hqpa84d2dqvp" path="res://fonts/Better VCR 9.0.1.ttf" id="23_bt5mj"]
 [ext_resource type="Texture2D" uid="uid://oqgtp468wc6x" path="res://graphics/objects/sign.png" id="23_gxtfn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iywne"]
 size = Vector2(384, 191)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qnb83"]
+size = Vector2(6, 8)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vtaks"]
 size = Vector2(6, 8)
@@ -31,16 +36,92 @@ size = Vector2(6, 8)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bt5mj"]
 size = Vector2(4, 7.5)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_e1j6l"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_37s47"]
+size = Vector2(4, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bhx41"]
+size = Vector2(4, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sww3w"]
 size = Vector2(12, 17)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_suyxu"]
+size = Vector2(12, 17.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e1j6l"]
+size = Vector2(12, 17.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pl11u"]
 size = Vector2(6, 8.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sgl2t"]
+size = Vector2(6, 8.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qouja"]
+size = Vector2(6, 8.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wljb1"]
+size = Vector2(6, 8.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v2yb1"]
+size = Vector2(6, 8.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_js0lu"]
+size = Vector2(6, 8.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5newe"]
+size = Vector2(46, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gxtfn"]
+size = Vector2(46, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_twgab"]
+size = Vector2(4, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_02fa5"]
+size = Vector2(14, 4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nepv3"]
+size = Vector2(14, 4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fedci"]
+size = Vector2(14, 4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7025r"]
+size = Vector2(14, 4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m4url"]
+size = Vector2(14, 4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ool0"]
+size = Vector2(94, 54)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pr1ej"]
+size = Vector2(76, 84.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_05nbr"]
+size = Vector2(8, 6.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0sl42"]
+size = Vector2(8, 6.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oaba0"]
+size = Vector2(8, 6.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_458eo"]
+size = Vector2(1, 8.125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h3rex"]
+size = Vector2(1, 8.125)
+
 [node name="Game" type="Node2D" unique_id=467729423]
 script = ExtResource("1_iywne")
-metadata/_edit_vertical_guides_ = [-192.0, 192.0]
+metadata/_edit_vertical_guides_ = [-192.0, 191.0]
 metadata/_edit_horizontal_guides_ = [-321.0, 321.0]
+
+[node name="BG" type="Sprite2D" parent="." unique_id=1345256118]
+texture = ExtResource("1_uwrxv")
+metadata/_edit_lock_ = true
 
 [node name="Borders" type="Node2D" parent="." unique_id=415481330]
 position = Vector2(-193, -2)
@@ -71,13 +152,13 @@ collision_mask = 2
 position = Vector2(0, -85.5)
 shape = SubResource("RectangleShape2D_iywne")
 
-[node name="BG" type="Sprite2D" parent="." unique_id=1345256118]
-texture = ExtResource("1_uwrxv")
-metadata/_edit_lock_ = true
-
 [node name="Timer" type="Node" parent="." unique_id=261986938]
 
 [node name="CarTimer" type="Timer" parent="Timer" unique_id=920643861]
+wait_time = 0.15
+autostart = true
+
+[node name="ScoreTimer" type="Timer" parent="Timer" unique_id=642470580]
 autostart = true
 
 [node name="CarStartPositions" type="Node2D" parent="." unique_id=433987214]
@@ -113,159 +194,6 @@ position = Vector2(-190, 93)
 [node name="Objects" type="Node2D" parent="." unique_id=922064921]
 y_sort_enabled = true
 
-[node name="Tree" parent="Objects" unique_id=809148713 instance=ExtResource("3_lnu2h")]
-position = Vector2(-69, 216)
-
-[node name="Tree37" parent="Objects" unique_id=546159455 instance=ExtResource("3_lnu2h")]
-position = Vector2(-141, 214)
-
-[node name="Tree38" parent="Objects" unique_id=193185414 instance=ExtResource("3_lnu2h")]
-position = Vector2(-141, 242)
-
-[node name="Tree39" parent="Objects" unique_id=1617403155 instance=ExtResource("3_lnu2h")]
-position = Vector2(-141, 272)
-
-[node name="Tree40" parent="Objects" unique_id=1156823184 instance=ExtResource("3_lnu2h")]
-position = Vector2(-141, 298)
-
-[node name="Tree41" parent="Objects" unique_id=2058106230 instance=ExtResource("3_lnu2h")]
-position = Vector2(-161, 298)
-
-[node name="Tree42" parent="Objects" unique_id=1893768738 instance=ExtResource("3_lnu2h")]
-position = Vector2(-182, 299)
-
-[node name="Tree43" parent="Objects" unique_id=925012440 instance=ExtResource("3_lnu2h")]
-position = Vector2(-173, 285)
-
-[node name="Tree44" parent="Objects" unique_id=1422094706 instance=ExtResource("3_lnu2h")]
-position = Vector2(-182, 264)
-
-[node name="Tree45" parent="Objects" unique_id=1051848479 instance=ExtResource("3_lnu2h")]
-position = Vector2(-158, 265)
-
-[node name="Tree46" parent="Objects" unique_id=2053253175 instance=ExtResource("3_lnu2h")]
-position = Vector2(-170, 247)
-
-[node name="Tree47" parent="Objects" unique_id=1694113358 instance=ExtResource("3_lnu2h")]
-position = Vector2(-156, 247)
-
-[node name="Tree48" parent="Objects" unique_id=151140454 instance=ExtResource("3_lnu2h")]
-position = Vector2(-185, 211)
-
-[node name="Tree49" parent="Objects" unique_id=1735630639 instance=ExtResource("3_lnu2h")]
-position = Vector2(-184, 231)
-
-[node name="Tree50" parent="Objects" unique_id=951742770 instance=ExtResource("3_lnu2h")]
-position = Vector2(-165, 217)
-
-[node name="Tree51" parent="Objects" unique_id=1144551675 instance=ExtResource("3_lnu2h")]
-position = Vector2(-165, 217)
-
-[node name="Tree4" parent="Objects" unique_id=370146791 instance=ExtResource("3_lnu2h")]
-position = Vector2(-68, 272)
-
-[node name="Tree26" parent="Objects" unique_id=1313913122 instance=ExtResource("3_lnu2h")]
-position = Vector2(-46, 275)
-
-[node name="Tree27" parent="Objects" unique_id=1686452134 instance=ExtResource("3_lnu2h")]
-position = Vector2(-21, 269)
-
-[node name="Tree28" parent="Objects" unique_id=1638281018 instance=ExtResource("3_lnu2h")]
-position = Vector2(-1, 276)
-
-[node name="Tree29" parent="Objects" unique_id=981460334 instance=ExtResource("3_lnu2h")]
-position = Vector2(42, 274)
-
-[node name="Tree7" parent="Objects" unique_id=2119947950 instance=ExtResource("3_lnu2h")]
-position = Vector2(83, 256)
-
-[node name="Tree9" parent="Objects" unique_id=1304913613 instance=ExtResource("3_lnu2h")]
-position = Vector2(84, 220)
-
-[node name="Tree10" parent="Objects" unique_id=431305772 instance=ExtResource("3_lnu2h")]
-position = Vector2(119, 258)
-
-[node name="Tree13" parent="Objects" unique_id=728502849 instance=ExtResource("3_lnu2h")]
-position = Vector2(156, 219)
-
-[node name="Tree14" parent="Objects" unique_id=1376683505 instance=ExtResource("3_lnu2h")]
-position = Vector2(155, 252)
-
-[node name="Tree15" parent="Objects" unique_id=1454848274 instance=ExtResource("3_lnu2h")]
-position = Vector2(166, 293)
-
-[node name="Tree36" parent="Objects" unique_id=1888212126 instance=ExtResource("3_lnu2h")]
-position = Vector2(177, 262)
-
-[node name="Tree34" parent="Objects" unique_id=1084033004 instance=ExtResource("3_lnu2h")]
-position = Vector2(102, 303)
-
-[node name="Tree35" parent="Objects" unique_id=619318341 instance=ExtResource("3_lnu2h")]
-position = Vector2(178, 224)
-
-[node name="Tree30" parent="Objects" unique_id=285414133 instance=ExtResource("3_lnu2h")]
-position = Vector2(109, 285)
-
-[node name="Tree11" parent="Objects" unique_id=129868473 instance=ExtResource("3_lnu2h")]
-position = Vector2(133, 292)
-
-[node name="Tree12" parent="Objects" unique_id=221727419 instance=ExtResource("3_lnu2h")]
-position = Vector2(120, 223)
-
-[node name="Tree8" parent="Objects" unique_id=585853377 instance=ExtResource("3_lnu2h")]
-position = Vector2(86, 300)
-
-[node name="Tree31" parent="Objects" unique_id=331069368 instance=ExtResource("3_lnu2h")]
-position = Vector2(71, 302)
-
-[node name="Tree32" parent="Objects" unique_id=1411287753 instance=ExtResource("3_lnu2h")]
-position = Vector2(61, 263)
-
-[node name="Tree33" parent="Objects" unique_id=1476066995 instance=ExtResource("3_lnu2h")]
-position = Vector2(64, 233)
-
-[node name="Tree2" parent="Objects" unique_id=634540566 instance=ExtResource("3_lnu2h")]
-position = Vector2(-43, 215)
-
-[node name="Tree16" parent="Objects" unique_id=1110632968 instance=ExtResource("3_lnu2h")]
-position = Vector2(-55, 247)
-
-[node name="Tree17" parent="Objects" unique_id=697879622 instance=ExtResource("3_lnu2h")]
-position = Vector2(-32, 246)
-
-[node name="Tree18" parent="Objects" unique_id=835617347 instance=ExtResource("3_lnu2h")]
-position = Vector2(-2, 241)
-
-[node name="Tree19" parent="Objects" unique_id=1329391293 instance=ExtResource("3_lnu2h")]
-position = Vector2(10, 215)
-
-[node name="Tree20" parent="Objects" unique_id=1151450691 instance=ExtResource("3_lnu2h")]
-position = Vector2(23, 249)
-
-[node name="Tree21" parent="Objects" unique_id=20418576 instance=ExtResource("3_lnu2h")]
-position = Vector2(41, 215)
-
-[node name="Tree22" parent="Objects" unique_id=727570051 instance=ExtResource("3_lnu2h")]
-position = Vector2(45, 244)
-
-[node name="Tree3" parent="Objects" unique_id=1827139570 instance=ExtResource("3_lnu2h")]
-position = Vector2(-19, 215)
-
-[node name="Tree5" parent="Objects" unique_id=1490608493 instance=ExtResource("3_lnu2h")]
-position = Vector2(-66, 301)
-
-[node name="Tree6" parent="Objects" unique_id=1759696559 instance=ExtResource("3_lnu2h")]
-position = Vector2(-36, 301)
-
-[node name="Tree23" parent="Objects" unique_id=1988976279 instance=ExtResource("3_lnu2h")]
-position = Vector2(10, 304)
-
-[node name="Tree24" parent="Objects" unique_id=596774614 instance=ExtResource("3_lnu2h")]
-position = Vector2(38, 302)
-
-[node name="Tree25" parent="Objects" unique_id=152787522 instance=ExtResource("3_lnu2h")]
-position = Vector2(-17, 299)
-
 [node name="Player" parent="Objects" unique_id=1514745219 instance=ExtResource("2_yqjtg")]
 position = Vector2(-105, 241)
 
@@ -277,88 +205,131 @@ position = Vector2(59, 65)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/Stuff/StaticBody2D" unique_id=1988534426]
 position = Vector2(-66, -44)
-shape = SubResource("RectangleShape2D_vtaks")
-metadata/_edit_group_ = true
+shape = SubResource("RectangleShape2D_qnb83")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Objects/Stuff/StaticBody2D" unique_id=1766287758]
 position = Vector2(-153, -36.5)
 shape = SubResource("RectangleShape2D_vtaks")
-metadata/_edit_group_ = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Objects/Stuff/StaticBody2D" unique_id=768951082]
 position = Vector2(-199.8, 2.4000015)
 polygon = PackedVector2Array(-15.199997, -14.400002, 6.800003, -14.400002, 6.800003, -3.9397507, 6.800003, 4.5999985, -7.199997, 4.5999985, -7.199997, -4.4000015, -7.199997, -5.4000015, -15.199997, -5.4000015)
-metadata/_edit_group_ = true
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Objects/Stuff/StaticBody2D" unique_id=1816405427]
 position = Vector2(-47, 4)
 polygon = PackedVector2Array(-5, -7, -5, -4, -7, -4, -7, -1, -6, -1, -6, 3, -5, 3, -5, -1, 5, -1, 5, 3, 6, 3, 6, -1, 7, -1, 7, -4, 5, -4, 5, -7, 3, -7, 3, -4, -3, -4, -3, -7)
-metadata/_edit_group_ = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Objects/Stuff/StaticBody2D" unique_id=405519289]
-position = Vector2(-3, -44.5)
+position = Vector2(-3, -45.75)
 shape = SubResource("RectangleShape2D_bt5mj")
-metadata/_edit_group_ = true
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Objects/Stuff/StaticBody2D" unique_id=335422314]
-position = Vector2(-4, 4)
-shape = SubResource("RectangleShape2D_bt5mj")
-metadata/_edit_group_ = true
+position = Vector2(-4, 0)
+shape = SubResource("RectangleShape2D_37s47")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Objects/Stuff/StaticBody2D" unique_id=1146812237]
-position = Vector2(-66, 4.25)
-shape = SubResource("RectangleShape2D_bt5mj")
-metadata/_edit_group_ = true
+position = Vector2(-66, 3)
+shape = SubResource("RectangleShape2D_bhx41")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Objects/Stuff/StaticBody2D" unique_id=1034926341]
 position = Vector2(-171, -2.5)
-shape = SubResource("RectangleShape2D_e1j6l")
-metadata/_edit_group_ = true
+shape = SubResource("RectangleShape2D_sww3w")
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="Objects/Stuff/StaticBody2D" unique_id=1714651042]
-position = Vector2(85, -3)
-shape = SubResource("RectangleShape2D_e1j6l")
-metadata/_edit_group_ = true
+position = Vector2(85, -2.75)
+shape = SubResource("RectangleShape2D_suyxu")
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="Objects/Stuff/StaticBody2D" unique_id=385917234]
-position = Vector2(117, -2)
+position = Vector2(117, -1.75)
 shape = SubResource("RectangleShape2D_e1j6l")
-metadata/_edit_group_ = true
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="Objects/Stuff/StaticBody2D" unique_id=103516459]
 position = Vector2(-143, 231)
 shape = SubResource("RectangleShape2D_pl11u")
-metadata/_edit_group_ = true
 
 [node name="CollisionShape2D13" type="CollisionShape2D" parent="Objects/Stuff/StaticBody2D" unique_id=751869747]
 position = Vector2(-142.5, 201)
-shape = SubResource("RectangleShape2D_pl11u")
-metadata/_edit_group_ = true
+shape = SubResource("RectangleShape2D_sgl2t")
 
 [node name="CollisionShape2D14" type="CollisionShape2D" parent="Objects/Stuff/StaticBody2D" unique_id=1669893373]
 position = Vector2(-143.5, 171)
-shape = SubResource("RectangleShape2D_pl11u")
-metadata/_edit_group_ = true
+shape = SubResource("RectangleShape2D_qouja")
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="Objects/Stuff/StaticBody2D" unique_id=101265933]
 position = Vector2(-183, 231)
-shape = SubResource("RectangleShape2D_pl11u")
-metadata/_edit_group_ = true
+shape = SubResource("RectangleShape2D_wljb1")
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="Objects/Stuff/StaticBody2D" unique_id=653768785]
 position = Vector2(-183, 201)
-shape = SubResource("RectangleShape2D_pl11u")
-metadata/_edit_group_ = true
+shape = SubResource("RectangleShape2D_v2yb1")
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="Objects/Stuff/StaticBody2D" unique_id=1268517539]
 position = Vector2(-181.5, 171)
-shape = SubResource("RectangleShape2D_pl11u")
-metadata/_edit_group_ = true
+shape = SubResource("RectangleShape2D_js0lu")
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="Objects/Stuff/StaticBody2D" unique_id=428789597]
+position = Vector2(-93, -17)
+shape = SubResource("RectangleShape2D_5newe")
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="Objects/Stuff/StaticBody2D" unique_id=455650149]
+position = Vector2(39, -17)
+shape = SubResource("RectangleShape2D_gxtfn")
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="Objects/Stuff/StaticBody2D" unique_id=580267014]
+position = Vector2(100, -36)
+shape = SubResource("RectangleShape2D_twgab")
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="Objects/Stuff/StaticBody2D" unique_id=2098995066]
+position = Vector2(-47, 1)
+shape = SubResource("RectangleShape2D_02fa5")
+
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="Objects/Stuff/StaticBody2D" unique_id=2017729135]
+position = Vector2(-88, -141)
+shape = SubResource("RectangleShape2D_nepv3")
+
+[node name="CollisionShape2D29" type="CollisionShape2D" parent="Objects/Stuff/StaticBody2D" unique_id=1277244956]
+position = Vector2(61, -140)
+shape = SubResource("RectangleShape2D_fedci")
+
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="Objects/Stuff/StaticBody2D" unique_id=1321834936]
+position = Vector2(-140, -140)
+shape = SubResource("RectangleShape2D_7025r")
+
+[node name="CollisionShape2D21" type="CollisionShape2D" parent="Objects/Stuff/StaticBody2D" unique_id=549960947]
+position = Vector2(-190, -140)
+shape = SubResource("RectangleShape2D_m4url")
+
+[node name="CollisionShape2D22" type="CollisionShape2D" parent="Objects/Stuff/StaticBody2D" unique_id=1417407652]
+position = Vector2(-199, -247)
+shape = SubResource("RectangleShape2D_8ool0")
+
+[node name="CollisionShape2D23" type="CollisionShape2D" parent="Objects/Stuff/StaticBody2D" unique_id=1135643326]
+position = Vector2(88, -261)
+shape = SubResource("RectangleShape2D_pr1ej")
+
+[node name="CollisionShape2D24" type="CollisionShape2D" parent="Objects/Stuff/StaticBody2D" unique_id=853842217]
+position = Vector2(126, -212.875)
+shape = SubResource("RectangleShape2D_05nbr")
+
+[node name="CollisionShape2D25" type="CollisionShape2D" parent="Objects/Stuff/StaticBody2D" unique_id=1477277316]
+position = Vector2(-228, -212)
+shape = SubResource("RectangleShape2D_0sl42")
+
+[node name="CollisionShape2D26" type="CollisionShape2D" parent="Objects/Stuff/StaticBody2D" unique_id=1170803894]
+position = Vector2(-242, -212)
+shape = SubResource("RectangleShape2D_oaba0")
+
+[node name="CollisionShape2D27" type="CollisionShape2D" parent="Objects/Stuff/StaticBody2D" unique_id=1640900065]
+position = Vector2(-239.5, -33.9375)
+shape = SubResource("RectangleShape2D_458eo")
+
+[node name="CollisionShape2D28" type="CollisionShape2D" parent="Objects/Stuff/StaticBody2D" unique_id=1727744363]
+position = Vector2(-188.5, -34)
+shape = SubResource("RectangleShape2D_h3rex")
 
 [node name="Box3" type="Sprite2D" parent="Objects/Stuff" unique_id=2025884457]
 position = Vector2(-141, 68)
 texture = ExtResource("6_vtaks")
-metadata/_edit_group_ = true
 
 [node name="Light" type="Sprite2D" parent="Objects/Stuff" unique_id=10451780]
 position = Vector2(159, 21)
@@ -367,7 +338,6 @@ texture = ExtResource("7_kvpfn")
 [node name="Traffic" type="Sprite2D" parent="Objects/Stuff" unique_id=468691929]
 position = Vector2(52, 10)
 texture = ExtResource("8_dinhu")
-metadata/_edit_group_ = true
 
 [node name="Barrier" type="Sprite2D" parent="Objects/Stuff" unique_id=388721892]
 position = Vector2(12, 67)
@@ -401,65 +371,53 @@ texture = ExtResource("14_bhx41")
 position = Vector2(-3, 60)
 texture = ExtResource("8_dinhu")
 flip_h = true
-metadata/_edit_group_ = true
 
 [node name="RedCar" type="Sprite2D" parent="Objects/Stuff" unique_id=1385877735]
 position = Vector2(144, 62)
 texture = ExtResource("15_qnb83")
-metadata/_edit_group_ = true
 
 [node name="Taxi" type="Sprite2D" parent="Objects/Stuff" unique_id=436560057]
 position = Vector2(176, 63)
 texture = ExtResource("16_sww3w")
-metadata/_edit_group_ = true
 
 [node name="Bench" type="Sprite2D" parent="Objects/Stuff" unique_id=2058535075]
 position = Vector2(-84, 295)
 texture = ExtResource("19_qouja")
-metadata/_edit_group_ = true
 
 [node name="Bench5" type="Sprite2D" parent="Objects/Stuff" unique_id=764661546]
 position = Vector2(-83.5, 265)
 texture = ExtResource("19_qouja")
-metadata/_edit_group_ = true
 
 [node name="Bench6" type="Sprite2D" parent="Objects/Stuff" unique_id=668318841]
 position = Vector2(-84.5, 235)
 texture = ExtResource("19_qouja")
-metadata/_edit_group_ = true
 
 [node name="Bench2" type="Sprite2D" parent="Objects/Stuff" unique_id=440774367]
 position = Vector2(-124, 295)
 texture = ExtResource("19_qouja")
 flip_h = true
-metadata/_edit_group_ = true
 
 [node name="Bench3" type="Sprite2D" parent="Objects/Stuff" unique_id=948035906]
 position = Vector2(-124, 265)
 texture = ExtResource("19_qouja")
 flip_h = true
-metadata/_edit_group_ = true
 
 [node name="Bench4" type="Sprite2D" parent="Objects/Stuff" unique_id=1045304729]
 position = Vector2(-123.5, 235)
 texture = ExtResource("19_qouja")
 flip_h = true
-metadata/_edit_group_ = true
 
 [node name="Bin2" type="Sprite2D" parent="Objects/Stuff" unique_id=913836690]
 position = Vector2(-94, 28.5)
 texture = ExtResource("10_trtic")
-metadata/_edit_group_ = true
 
 [node name="Box2" type="Sprite2D" parent="Objects/Stuff" unique_id=1298738480]
 position = Vector2(-139, 57)
 texture = ExtResource("20_wljb1")
-metadata/_edit_group_ = true
 
 [node name="Box1" type="Sprite2D" parent="Objects/Stuff" unique_id=1276480702]
 position = Vector2(-151, 57)
 texture = ExtResource("21_v2yb1")
-metadata/_edit_group_ = true
 
 [node name="Barrier2" type="Sprite2D" parent="Objects/Stuff" unique_id=122606811]
 position = Vector2(-131, -75)
@@ -484,7 +442,282 @@ texture = ExtResource("22_js0lu")
 [node name="Sign" type="Sprite2D" parent="Objects/Stuff" unique_id=502519810]
 position = Vector2(55, 57)
 texture = ExtResource("23_gxtfn")
-metadata/_edit_group_ = true
+
+[node name="Tree" parent="Objects/Stuff" unique_id=809148713 instance=ExtResource("3_lnu2h")]
+position = Vector2(-69, 216)
+
+[node name="Tree37" parent="Objects/Stuff" unique_id=546159455 instance=ExtResource("3_lnu2h")]
+position = Vector2(-141, 214)
+
+[node name="Tree38" parent="Objects/Stuff" unique_id=193185414 instance=ExtResource("3_lnu2h")]
+position = Vector2(-141, 242)
+
+[node name="Tree39" parent="Objects/Stuff" unique_id=1617403155 instance=ExtResource("3_lnu2h")]
+position = Vector2(-141, 272)
+
+[node name="Tree40" parent="Objects/Stuff" unique_id=1156823184 instance=ExtResource("3_lnu2h")]
+position = Vector2(-141, 298)
+
+[node name="Tree41" parent="Objects/Stuff" unique_id=2058106230 instance=ExtResource("3_lnu2h")]
+position = Vector2(-161, 298)
+
+[node name="Tree42" parent="Objects/Stuff" unique_id=1893768738 instance=ExtResource("3_lnu2h")]
+position = Vector2(-182, 299)
+
+[node name="Tree43" parent="Objects/Stuff" unique_id=925012440 instance=ExtResource("3_lnu2h")]
+position = Vector2(-173, 285)
+
+[node name="Tree44" parent="Objects/Stuff" unique_id=1422094706 instance=ExtResource("3_lnu2h")]
+position = Vector2(-182, 264)
+
+[node name="Tree45" parent="Objects/Stuff" unique_id=1051848479 instance=ExtResource("3_lnu2h")]
+position = Vector2(-158, 265)
+
+[node name="Tree46" parent="Objects/Stuff" unique_id=2053253175 instance=ExtResource("3_lnu2h")]
+position = Vector2(-170, 247)
+
+[node name="Tree47" parent="Objects/Stuff" unique_id=1694113358 instance=ExtResource("3_lnu2h")]
+position = Vector2(-156, 247)
+
+[node name="Tree48" parent="Objects/Stuff" unique_id=151140454 instance=ExtResource("3_lnu2h")]
+position = Vector2(-185, 211)
+
+[node name="Tree49" parent="Objects/Stuff" unique_id=1735630639 instance=ExtResource("3_lnu2h")]
+position = Vector2(-184, 231)
+
+[node name="Tree50" parent="Objects/Stuff" unique_id=951742770 instance=ExtResource("3_lnu2h")]
+position = Vector2(-165, 217)
+
+[node name="Tree51" parent="Objects/Stuff" unique_id=1144551675 instance=ExtResource("3_lnu2h")]
+position = Vector2(-165, 217)
+
+[node name="Tree4" parent="Objects/Stuff" unique_id=370146791 instance=ExtResource("3_lnu2h")]
+position = Vector2(-68, 272)
+
+[node name="Tree26" parent="Objects/Stuff" unique_id=1313913122 instance=ExtResource("3_lnu2h")]
+position = Vector2(-46, 275)
+
+[node name="Tree27" parent="Objects/Stuff" unique_id=1686452134 instance=ExtResource("3_lnu2h")]
+position = Vector2(-21, 269)
+
+[node name="Tree28" parent="Objects/Stuff" unique_id=1638281018 instance=ExtResource("3_lnu2h")]
+position = Vector2(-1, 276)
+
+[node name="Tree29" parent="Objects/Stuff" unique_id=981460334 instance=ExtResource("3_lnu2h")]
+position = Vector2(42, 274)
+
+[node name="Tree7" parent="Objects/Stuff" unique_id=2119947950 instance=ExtResource("3_lnu2h")]
+position = Vector2(83, 256)
+
+[node name="Tree9" parent="Objects/Stuff" unique_id=1304913613 instance=ExtResource("3_lnu2h")]
+position = Vector2(84, 220)
+
+[node name="Tree10" parent="Objects/Stuff" unique_id=431305772 instance=ExtResource("3_lnu2h")]
+position = Vector2(119, 258)
+
+[node name="Tree13" parent="Objects/Stuff" unique_id=728502849 instance=ExtResource("3_lnu2h")]
+position = Vector2(156, 219)
+
+[node name="Tree14" parent="Objects/Stuff" unique_id=1376683505 instance=ExtResource("3_lnu2h")]
+position = Vector2(155, 252)
+
+[node name="Tree15" parent="Objects/Stuff" unique_id=1454848274 instance=ExtResource("3_lnu2h")]
+position = Vector2(166, 293)
+
+[node name="Tree36" parent="Objects/Stuff" unique_id=1888212126 instance=ExtResource("3_lnu2h")]
+position = Vector2(177, 262)
+
+[node name="Tree34" parent="Objects/Stuff" unique_id=1084033004 instance=ExtResource("3_lnu2h")]
+position = Vector2(102, 303)
+
+[node name="Tree35" parent="Objects/Stuff" unique_id=619318341 instance=ExtResource("3_lnu2h")]
+position = Vector2(178, 224)
+
+[node name="Tree30" parent="Objects/Stuff" unique_id=285414133 instance=ExtResource("3_lnu2h")]
+position = Vector2(109, 285)
+
+[node name="Tree11" parent="Objects/Stuff" unique_id=129868473 instance=ExtResource("3_lnu2h")]
+position = Vector2(133, 292)
+
+[node name="Tree12" parent="Objects/Stuff" unique_id=221727419 instance=ExtResource("3_lnu2h")]
+position = Vector2(120, 223)
+
+[node name="Tree8" parent="Objects/Stuff" unique_id=585853377 instance=ExtResource("3_lnu2h")]
+position = Vector2(86, 300)
+
+[node name="Tree31" parent="Objects/Stuff" unique_id=331069368 instance=ExtResource("3_lnu2h")]
+position = Vector2(71, 302)
+
+[node name="Tree32" parent="Objects/Stuff" unique_id=1411287753 instance=ExtResource("3_lnu2h")]
+position = Vector2(61, 263)
+
+[node name="Tree33" parent="Objects/Stuff" unique_id=1476066995 instance=ExtResource("3_lnu2h")]
+position = Vector2(64, 233)
+
+[node name="Tree2" parent="Objects/Stuff" unique_id=634540566 instance=ExtResource("3_lnu2h")]
+position = Vector2(-43, 215)
+
+[node name="Tree52" parent="Objects/Stuff" unique_id=518636993 instance=ExtResource("3_lnu2h")]
+position = Vector2(-78, -246)
+
+[node name="Tree53" parent="Objects/Stuff" unique_id=953193641 instance=ExtResource("3_lnu2h")]
+position = Vector2(-109, -248)
+
+[node name="Tree54" parent="Objects/Stuff" unique_id=1477416456 instance=ExtResource("3_lnu2h")]
+position = Vector2(-176, -249)
+
+[node name="Tree55" parent="Objects/Stuff" unique_id=209292138 instance=ExtResource("3_lnu2h")]
+position = Vector2(-141, -249)
+
+[node name="Tree56" parent="Objects/Stuff" unique_id=302902943 instance=ExtResource("3_lnu2h")]
+position = Vector2(-158, -267)
+
+[node name="Tree57" parent="Objects/Stuff" unique_id=1226860541 instance=ExtResource("3_lnu2h")]
+position = Vector2(-125, -267)
+
+[node name="Tree58" parent="Objects/Stuff" unique_id=1753184733 instance=ExtResource("3_lnu2h")]
+position = Vector2(-96, -275)
+
+[node name="Tree59" parent="Objects/Stuff" unique_id=1915856775 instance=ExtResource("3_lnu2h")]
+position = Vector2(-113, -296)
+
+[node name="Tree60" parent="Objects/Stuff" unique_id=1692475290 instance=ExtResource("3_lnu2h")]
+position = Vector2(-139, -297)
+
+[node name="Tree61" parent="Objects/Stuff" unique_id=1769346993 instance=ExtResource("3_lnu2h")]
+position = Vector2(-170, -303)
+
+[node name="Tree62" parent="Objects/Stuff" unique_id=2052716086 instance=ExtResource("3_lnu2h")]
+position = Vector2(-182, -280)
+
+[node name="Tree63" parent="Objects/Stuff" unique_id=280166224 instance=ExtResource("3_lnu2h")]
+position = Vector2(-90, -310)
+
+[node name="Tree64" parent="Objects/Stuff" unique_id=1186080334 instance=ExtResource("3_lnu2h")]
+position = Vector2(-77, -285)
+
+[node name="Tree65" parent="Objects/Stuff" unique_id=443604125 instance=ExtResource("3_lnu2h")]
+position = Vector2(96, -242)
+
+[node name="Tree66" parent="Objects/Stuff" unique_id=17927599 instance=ExtResource("3_lnu2h")]
+position = Vector2(96, -277)
+
+[node name="Tree67" parent="Objects/Stuff" unique_id=1081324060 instance=ExtResource("3_lnu2h")]
+position = Vector2(115, -260)
+
+[node name="Tree68" parent="Objects/Stuff" unique_id=125862786 instance=ExtResource("3_lnu2h")]
+position = Vector2(179, -264)
+
+[node name="Tree69" parent="Objects/Stuff" unique_id=337421263 instance=ExtResource("3_lnu2h")]
+position = Vector2(181, -311)
+
+[node name="Tree70" parent="Objects/Stuff" unique_id=685314910 instance=ExtResource("3_lnu2h")]
+position = Vector2(157, -269)
+
+[node name="Tree71" parent="Objects/Stuff" unique_id=616339034 instance=ExtResource("3_lnu2h")]
+position = Vector2(169, -289)
+
+[node name="Tree72" parent="Objects/Stuff" unique_id=688394849 instance=ExtResource("3_lnu2h")]
+position = Vector2(131, -284)
+
+[node name="Tree73" parent="Objects/Stuff" unique_id=1965614535 instance=ExtResource("3_lnu2h")]
+position = Vector2(150, -311)
+
+[node name="Tree74" parent="Objects/Stuff" unique_id=1505715696 instance=ExtResource("3_lnu2h")]
+position = Vector2(116, -311)
+
+[node name="Tree75" parent="Objects/Stuff" unique_id=1852873273 instance=ExtResource("3_lnu2h")]
+position = Vector2(95, -310)
+
+[node name="Tree76" parent="Objects/Stuff" unique_id=1744330981 instance=ExtResource("3_lnu2h")]
+position = Vector2(73, -311)
+
+[node name="Tree77" parent="Objects/Stuff" unique_id=202615950 instance=ExtResource("3_lnu2h")]
+position = Vector2(75, -288)
+
+[node name="Tree78" parent="Objects/Stuff" unique_id=1498197871 instance=ExtResource("3_lnu2h")]
+position = Vector2(83, -260)
+
+[node name="Tree79" parent="Objects/Stuff" unique_id=193083502 instance=ExtResource("3_lnu2h")]
+position = Vector2(63, -244)
+
+[node name="Tree16" parent="Objects/Stuff" unique_id=1110632968 instance=ExtResource("3_lnu2h")]
+position = Vector2(-55, 247)
+
+[node name="Tree17" parent="Objects/Stuff" unique_id=697879622 instance=ExtResource("3_lnu2h")]
+position = Vector2(-32, 246)
+
+[node name="Tree18" parent="Objects/Stuff" unique_id=835617347 instance=ExtResource("3_lnu2h")]
+position = Vector2(-2, 241)
+
+[node name="Tree19" parent="Objects/Stuff" unique_id=1329391293 instance=ExtResource("3_lnu2h")]
+position = Vector2(10, 215)
+
+[node name="Tree20" parent="Objects/Stuff" unique_id=1151450691 instance=ExtResource("3_lnu2h")]
+position = Vector2(23, 249)
+
+[node name="Tree21" parent="Objects/Stuff" unique_id=20418576 instance=ExtResource("3_lnu2h")]
+position = Vector2(41, 215)
+
+[node name="Tree22" parent="Objects/Stuff" unique_id=727570051 instance=ExtResource("3_lnu2h")]
+position = Vector2(45, 244)
+
+[node name="Tree3" parent="Objects/Stuff" unique_id=1827139570 instance=ExtResource("3_lnu2h")]
+position = Vector2(-19, 215)
+
+[node name="Tree5" parent="Objects/Stuff" unique_id=1490608493 instance=ExtResource("3_lnu2h")]
+position = Vector2(-66, 301)
+
+[node name="Tree6" parent="Objects/Stuff" unique_id=1759696559 instance=ExtResource("3_lnu2h")]
+position = Vector2(-36, 301)
+
+[node name="Tree23" parent="Objects/Stuff" unique_id=1988976279 instance=ExtResource("3_lnu2h")]
+position = Vector2(10, 304)
+
+[node name="Tree24" parent="Objects/Stuff" unique_id=596774614 instance=ExtResource("3_lnu2h")]
+position = Vector2(38, 302)
+
+[node name="Tree25" parent="Objects/Stuff" unique_id=152787522 instance=ExtResource("3_lnu2h")]
+position = Vector2(-17, 299)
+
+[node name="TreePotted" type="Sprite2D" parent="Objects/Stuff" unique_id=1618070075]
+position = Vector2(-183, -159)
+texture = ExtResource("22_37s47")
+
+[node name="TreePotted2" type="Sprite2D" parent="Objects/Stuff" unique_id=1140266565]
+position = Vector2(-169, -159)
+texture = ExtResource("22_37s47")
+
+[node name="TreePotted3" type="Sprite2D" parent="Objects/Stuff" unique_id=1552914521]
+position = Vector2(185, -159)
+texture = ExtResource("22_37s47")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1568387838]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1781304175]
+anchors_preset = -1
+anchor_left = 0.467
+anchor_right = 0.533
+offset_left = -20.0
+offset_top = 15.0
+offset_right = 20.0
+offset_bottom = 36.0
+grow_horizontal = 2
+color = Color(0, 0.11764706, 0.11372549, 0.5647059)
+
+[node name="TimerLabel" type="Label" parent="CanvasLayer" unique_id=1111321297]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -54.0
+offset_top = 16.0
+offset_right = 54.0
+offset_bottom = 36.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("23_bt5mj")
+text = "Score: 0"
+horizontal_alignment = 1
 
 [connection signal="body_entered" from="Borders/FinishArea2D" to="." method="_on_finish_area_2d_body_entered"]
 [connection signal="timeout" from="Timer/CarTimer" to="." method="_on_car_timer_timeout"]
+[connection signal="timeout" from="Timer/ScoreTimer" to="." method="_on_score_timer_timeout"]
