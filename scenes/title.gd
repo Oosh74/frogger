@@ -1,5 +1,10 @@
 extends Control
 
+@onready var score: Label = $Score
+
+
+func _ready():
+	score.text = 'Time Elapsed: ' + str(Global.score)
 
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed('Print'):

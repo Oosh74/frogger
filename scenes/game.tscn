@@ -165,31 +165,31 @@ autostart = true
 metadata/_edit_lock_ = true
 
 [node name="Marker2D2" type="Marker2D" parent="CarStartPositions" unique_id=256957578]
-position = Vector2(-190, -52)
+position = Vector2(-182, -52)
 
 [node name="Marker2D17" type="Marker2D" parent="CarStartPositions" unique_id=1909518804]
-position = Vector2(-190, -92)
+position = Vector2(-182, -92)
 
 [node name="Marker2D4" type="Marker2D" parent="CarStartPositions" unique_id=1885231247]
-position = Vector2(-190, 3)
+position = Vector2(-182, 3)
 
 [node name="Marker2D5" type="Marker2D" parent="CarStartPositions" unique_id=1137917248]
-position = Vector2(-190, 141)
+position = Vector2(-182, 141)
 
 [node name="Marker2D6" type="Marker2D" parent="CarStartPositions" unique_id=2125431142]
-position = Vector2(190, 166)
+position = Vector2(181, 166)
 
 [node name="Marker2D10" type="Marker2D" parent="CarStartPositions" unique_id=1635605208]
-position = Vector2(190, 114)
+position = Vector2(181, 114)
 
 [node name="Marker2D13" type="Marker2D" parent="CarStartPositions" unique_id=975194606]
-position = Vector2(190, -24)
+position = Vector2(181, -24)
 
 [node name="Marker2D16" type="Marker2D" parent="CarStartPositions" unique_id=187780719]
-position = Vector2(190, -115)
+position = Vector2(181, -115)
 
 [node name="Marker2D8" type="Marker2D" parent="CarStartPositions" unique_id=779653081]
-position = Vector2(-190, 93)
+position = Vector2(-182, 93)
 
 [node name="Objects" type="Node2D" parent="." unique_id=922064921]
 y_sort_enabled = true
@@ -696,26 +696,26 @@ texture = ExtResource("22_37s47")
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1781304175]
 anchors_preset = -1
-anchor_left = 0.467
-anchor_right = 0.533
-offset_left = -20.0
-offset_top = 15.0
-offset_right = 20.0
-offset_bottom = 36.0
+anchor_left = 0.389
+anchor_top = 0.011
+anchor_right = 0.611
+anchor_bottom = 0.067
 grow_horizontal = 2
+grow_vertical = 2
 color = Color(0, 0.11764706, 0.11372549, 0.5647059)
 
 [node name="TimerLabel" type="Label" parent="CanvasLayer" unique_id=1111321297]
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -54.0
-offset_top = 16.0
-offset_right = 54.0
-offset_bottom = 36.0
+anchors_preset = -1
+anchor_left = 0.43
+anchor_top = 0.022000002
+anchor_right = 0.57000005
+anchor_bottom = 0.05
+offset_left = -0.4000244
+offset_top = 0.1599989
+offset_right = 0.39990234
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("23_bt5mj")
-text = "Score: 0"
+text = "Time Elapsed: 0"
 horizontal_alignment = 1
 
 [connection signal="body_entered" from="Borders/FinishArea2D" to="." method="_on_finish_area_2d_body_entered"]

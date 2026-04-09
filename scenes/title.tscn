@@ -70,10 +70,10 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("3_kpexm")
 theme_override_font_sizes/font_size = 32
-text = "High Score: 23"
+text = "Time Elapsed: 0"
 horizontal_alignment = 2
 
-[node name="Score2" type="Label" parent="." unique_id=530875750]
+[node name="PlayAgain" type="Label" parent="." unique_id=530875750]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5

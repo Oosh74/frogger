@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED := 150
+const SPEED := 100
 var direction := Vector2.ZERO
 @onready var animations: AnimatedSprite2D = $AnimatedSprite2D
 
